@@ -11,7 +11,7 @@ Token claimsset, Authorities, JWS headers etc. are accessible from the object wh
 
 To run this sample, you'll need:
 
-- JDK 1.8 and above
+* A [Java Development Kit (JDK)][jdk_link], version 1.8.
 - [Maven](https://maven.apache.org/) 3.0 and above
 - An Internet connection
 - A Windows machine (necessary if you want to run the app on Windows)
@@ -25,13 +25,14 @@ To run this sample, you'll need:
 In this section, you register your web API in App registrations in the Azure portal.
 
 ### Choose your Azure AD tenant
+
 To register your apps manually, choose the Azure Active Directory (Azure AD) tenant where you want to create your apps.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) with either a work or school account or a personal Microsoft account.
 2. If your account is present in more than one Azure AD tenant, select your profile at the upper right, and then select **Switch directory**.
 3. Change your portal session to the Azure AD tenant you want to use.
 
-### Register the WEB API
+### Register the web API
 
 1. Go to the Microsoft identity platform for developers App registrations portal.
 
@@ -86,4 +87,5 @@ Access a URL in the browser that requires you to go to webAPI for a resource.
 ## Next steps
 ## Contributing
 <!-- LINKS -->
+[jdk_link]: https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [instruction]: https://github.com/Azure/azure-sdk-for-java/blob/master/sdk/spring/CONTRIBUTING.md#building-from-source
