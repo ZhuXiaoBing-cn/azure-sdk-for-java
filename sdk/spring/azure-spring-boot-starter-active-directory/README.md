@@ -238,8 +238,8 @@ public class AADOAuth2ResourceServerSecurityConfig extends WebSecurityConfigurer
             .jwtAuthenticationConverter(converter());
     }
 
-    //通过配置的authoritiesClaimName去提取assess token中的权限
-    //通过authorityPrefix去设置权限前缀
+    //Use the configured authoritiesClaimName to extract permissions in vestigial
+    //Set the permission prefix by authorityPrefix
     private AzureJwtBearerTokenAuthenticationConverter converter() {
         return new AzureJwtBearerTokenAuthenticationConverter("scp", "ROLE_");
     }
