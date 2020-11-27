@@ -212,6 +212,41 @@ azure.activedirectory.scope = openid, profile, https://graph.microsoft.com/user.
 ``` 
 Note, if you don't configure the 3 mentioned permissions, this starter will add them automatically.
 
+
+### 通过resource server保护resource api
+Please refer to azure-spring-boot-sample-active-directory-spring-oauth2-resource-server for access resource api.
+
+####  Configure application.properties:
+```properties
+azure.activedirectory.app-id-uri=xxxxxxxx-app-id-uri-xxxxxxxxxx
+azure.activedirectory.session-stateless=true
+#Use a port that is not occupied
+server.port=8081
+```
+
+#### Autowire `AADOAuth2ResourceServerSecurityConfig` bean in `WebSecurityConfigurerAdapter`:
+```java
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class AADOAuth2ResourceServerSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests((requests) -> requests.anyRequest().authenticated())
+            .oauth2ResourceServer()
+            .jwt()
+            .jwtAuthenticationConverter(converter());
+    }
+
+    //通过配置的authoritiesClaimName去提取assess token中的权限
+    //通过authorityPrefix去设置权限前缀
+    private AzureJwtBearerTokenAuthenticationConverter converter() {
+        return new AzureJwtBearerTokenAuthenticationConverter("scp", "ROLE_");
+    }
+
+}
+```
+
 ## Troubleshooting
 ### Enable client logging
 Azure SDKs for Java offers a consistent logging story to help aid in troubleshooting application errors and expedite their resolution. The logs produced will capture the flow of an application before reaching the terminal state to help locate the root issue. View the [logging][logging] wiki for guidance about enabling logging.
