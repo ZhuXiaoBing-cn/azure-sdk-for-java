@@ -213,8 +213,8 @@ azure.activedirectory.scope = openid, profile, https://graph.microsoft.com/user.
 Note, if you don't configure the 3 mentioned permissions, this starter will add them automatically.
 
 
-### 通过resource server保护resource api
-Please refer to azure-spring-boot-sample-active-directory-spring-oauth2-resource-server for access resource api.
+### Protect the Resource API through Resource Server
+Please refer to [azure-spring-boot-sample-active-directory-spring-oauth2-resource-server](https://github.com/Azure/azure-sdk-for-java/blob/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-spring-oauth2-resource-server) for access resource api.
 
 ####  Configure application.properties:
 ```properties
