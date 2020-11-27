@@ -20,7 +20,37 @@ To run this sample, you'll need:
 - An Azure Active Directory (Azure AD) tenant. For more information on how to get an Azure AD tenant, see [How to get an Azure AD tenant](https://azure.microsoft.com/documentation/articles/active-directory-howto-tenant/)
 - You register your web APP in App registrations in the Azure portal.
 - A Web APP runtime that requires access to a Web API.
-- You register your web API in App registrations in the Azure portal.
+
+## Register your web API
+In this section, you register your web API in App registrations in the Azure portal.
+
+###Choose your Azure AD tenant
+To register your apps manually, choose the Azure Active Directory (Azure AD) tenant where you want to create your apps.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/) with either a work or school account or a personal Microsoft account.
+2. If your account is present in more than one Azure AD tenant, select your profile at the upper right, and then select **Switch directory**.
+3. Change your portal session to the Azure AD tenant you want to use.
+
+### Register the WEB API
+
+1. Go to the Microsoft identity platform for developers App registrations portal.
+
+2. Select New registration.
+
+3. When the Register an application page opens, enter your application's registration information:
+    - In the Name section, enter a meaningful application name that will be displayed to app users. For example, enter **web-api-sample**.
+    - For Supported account types, select Accounts in any organizational directory.
+    - Select Register to create the application.
+        
+4. In the **Expose an API** section, select **Add a scope**, accept the proposed Application ID URI `(api://{clientId})` (back up the Application ID URI here,which will be used in the properties file) by selecting **Save and Continue**, and then enter the following information:
+   - For **Scope name**, enter **File.read**.
+   - For **Who can consent**, ensure that the **Admins and users** option is selected.
+   - In the **Admin consent display name** box, enter **Access File.read as a user**.
+   - In the **Admin consent description** box, enter **Accesses the File.read web API as a user**.
+   - In the **User consent display name** box, enter **Access File.read as a user**.
+   - In the **User consent description** box, enter **Accesses the File.read web API as a user**.
+   - For **State**, keep **Enabled**.
+   - Select **Add scope**.
 
 ## Examples
 
@@ -42,14 +72,14 @@ cd azure-spring-boot-samples/azure-spring-boot-sample-active-directory-spring-oa
 mvn spring-boot:run
 ```
 
-### 启动web app
+### Access the Web App Url
 
 Access a URL in the browser that requires you to go to webAPI for a resource.
 
 ### Check authorization
 
-1. Access `group1 Message` link, should success
-2. Access `group2 Message` link, should fail with forbidden error message
+1. Access `file read` link, should success.
+2. Access `user read` link, should fail.
 
 ## Troubleshooting
 

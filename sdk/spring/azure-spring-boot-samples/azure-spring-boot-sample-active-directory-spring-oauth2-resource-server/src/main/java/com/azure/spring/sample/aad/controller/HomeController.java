@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @GetMapping("group1")
+    @GetMapping("/file")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_group1')")
+    @PreAuthorize("hasRole('ROLE_File.read')")
     public String group1() {
-        return "group1 message";
+        return "file read success.";
     }
 
-    @GetMapping("group2")
+    @GetMapping("/user")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_group2')")
+    @PreAuthorize("hasRole('ROLE_User.read')")
     public String group2() {
-        return "group2 message";
+        return "user read success.";
     }
 
 }
