@@ -11,7 +11,7 @@ Token claimsset, Authorities, JWS headers etc. are accessible from the object wh
 
 To run this sample, you'll need:
 
-* A [Java Development Kit (JDK)][jdk_link], version 1.8.
+- A [Java Development Kit (JDK)][jdk_link], version 1.8.
 - [Maven](https://maven.apache.org/) 3.0 and above
 - An Internet connection
 - A Windows machine (necessary if you want to run the app on Windows)
