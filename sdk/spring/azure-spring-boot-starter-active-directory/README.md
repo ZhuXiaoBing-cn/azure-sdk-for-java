@@ -235,15 +235,8 @@ public class AADOAuth2ResourceServerSecurityConfig extends WebSecurityConfigurer
         http.authorizeRequests((requests) -> requests.anyRequest().authenticated())
             .oauth2ResourceServer()
             .jwt()
-            .jwtAuthenticationConverter(converter());
+            .jwtAuthenticationConverter(new AzureJwtBearerTokenAuthenticationConverter());
     }
-
-    //Use the configured authoritiesClaimName to extract permissions in vestigial
-    //Set the permission prefix by authorityPrefix
-    private AzureJwtBearerTokenAuthenticationConverter converter() {
-        return new AzureJwtBearerTokenAuthenticationConverter("scp", "ROLE_");
-    }
-
 }
 ```
 

@@ -15,14 +15,14 @@ public class HomeController {
 
     @GetMapping("/file")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_File.read')")
+    @PreAuthorize("hasRole('SCOPE__File.read')")
     public String group1() {
         return "file read success.";
     }
 
     @GetMapping("/user")
     @ResponseBody
-    @PreAuthorize("hasRole('ROLE_User.read')")
+    @PreAuthorize("hasRole('SCOPE_User.read')")
     public String group2() {
         return "user read success.";
     }
