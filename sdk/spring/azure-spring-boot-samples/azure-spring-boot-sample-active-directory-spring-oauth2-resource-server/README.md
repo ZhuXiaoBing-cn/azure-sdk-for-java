@@ -4,7 +4,7 @@
 This sample illustrates how to protect an Java web API by restricting access to its resources to authorized accounts only.
 Obtain Bearer Token in the request head of resources and carry out analysis and verification. After verification,
 injects AzureOAuth2AuthenticatedPrincipal object that is associated with the thread of the current user request. 
-token claimsset, JWS headers etc. are accessible from the object which can be used for role based authorization.
+Token claimsset, Authorities, JWS headers etc. are accessible from the object which can be used for role based authorization.
 
 
 ## Getting started
@@ -19,7 +19,7 @@ To run this sample, you'll need:
 - A Linux machine (necessary if you want to run the app on Linux)
 - An Azure Active Directory (Azure AD) tenant. For more information on how to get an Azure AD tenant, see [How to get an Azure AD tenant](https://azure.microsoft.com/documentation/articles/active-directory-howto-tenant/)
 - You register your web APP in App registrations in the Azure portal.
-- A web app being launched.
+- A Web APP runtime that requires access to a Web API.
 - You register your web API in App registrations in the Azure portal.
 
 ## Examples
