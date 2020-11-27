@@ -21,6 +21,19 @@ To run this sample, you'll need:
 - You register your web APP in App registrations in the Azure portal.
 - A Web APP runtime that requires access to a Web API.
 
+## Include the package
+```xml
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-resource-server</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-jose</artifactId>
+    </dependency>
+```
+
 ## Register your web API
 In this section, you register your web API in App registrations in the Azure portal.
 
