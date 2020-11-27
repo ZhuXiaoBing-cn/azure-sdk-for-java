@@ -24,7 +24,7 @@ To run this sample, you'll need:
 ## Register your web API
 In this section, you register your web API in App registrations in the Azure portal.
 
-###Choose your Azure AD tenant
+### Choose your Azure AD tenant
 To register your apps manually, choose the Azure Active Directory (Azure AD) tenant where you want to create your apps.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) with either a work or school account or a personal Microsoft account.
