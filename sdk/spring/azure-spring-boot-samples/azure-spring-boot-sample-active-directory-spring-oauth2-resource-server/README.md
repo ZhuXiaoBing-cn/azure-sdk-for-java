@@ -23,15 +23,16 @@ To run this sample, you'll need:
 
 ## Include the package
 ```xml
+  <dependencies>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-oauth2-resource-server</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-oauth2-jose</artifactId>
     </dependency>
+  </dependencies>
 ```
 
 ## Register your web API

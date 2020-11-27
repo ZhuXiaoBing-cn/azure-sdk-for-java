@@ -218,14 +218,16 @@ Please refer to [azure-spring-boot-sample-active-directory-spring-oauth2-resourc
 
 ### Include the package
 ```xml
-<dependency>
-  <groupId>org.springframework.security</groupId>
-  <artifactId>spring-security-oauth2-resource-server</artifactId>
-</dependency>
-<dependency>
-  <groupId>org.springframework.security</groupId>
-  <artifactId>spring-security-oauth2-jose</artifactId>
-</dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-resource-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-oauth2-jose</artifactId>
+    </dependency>
+  </dependencies>
 ```
 
 ####  Configure application.properties:
