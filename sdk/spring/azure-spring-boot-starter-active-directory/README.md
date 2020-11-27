@@ -224,7 +224,8 @@ azure.activedirectory.session-stateless=true
 server.port=8081
 ```
 
-#### Autowire `AADOAuth2ResourceServerSecurityConfig` bean in `WebSecurityConfigurerAdapter`:
+#### Using `AADOAuth2ResourceServerSecurityConfig` to extends `WebSecurityConfigurerAdapter`:
+
 ```java
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
