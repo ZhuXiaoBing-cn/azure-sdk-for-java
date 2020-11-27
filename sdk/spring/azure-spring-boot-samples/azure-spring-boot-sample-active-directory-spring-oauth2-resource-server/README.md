@@ -18,8 +18,10 @@ To run this sample, you'll need:
 - An OS X machine (necessary if you want to run the app on Mac)
 - A Linux machine (necessary if you want to run the app on Linux)
 - An Azure Active Directory (Azure AD) tenant. For more information on how to get an Azure AD tenant, see [How to get an Azure AD tenant](https://azure.microsoft.com/documentation/articles/active-directory-howto-tenant/)
-- 在 Azure Active Directory 中 your web API in App registrations in the Azure portal.
-- 有一个web app 程序，Go to the Azure portal - App registrations quickstart experience.
+- You register your web APP in App registrations in the Azure portal.
+- A web app being launched.
+- You register your web API in App registrations in the Azure portal.
+
 ## Examples
 
 ### Configure application.properties
@@ -27,7 +29,7 @@ To run this sample, you'll need:
 ```properties
 azure.activedirectory.app-id-uri=xxxxxxxx-app-id-uri-xxxxxxxxxx
 azure.activedirectory.session-stateless=true
-#使用一个没有被占用的端口
+#Use a port that is not occupied
 server.port=8081
 ```
 
