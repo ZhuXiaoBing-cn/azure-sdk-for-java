@@ -15,7 +15,7 @@ public class HomeController {
 
     @GetMapping("/file")
     @ResponseBody
-    @PreAuthorize("hasRole('SCOPE__File.read')")
+    @PreAuthorize("hasRole('SCOPE_File.read')")
     public String group1() {
         return "file read success.";
     }
