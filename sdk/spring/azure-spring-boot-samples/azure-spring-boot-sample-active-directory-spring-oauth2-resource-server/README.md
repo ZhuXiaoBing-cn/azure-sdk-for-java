@@ -25,6 +25,10 @@ To run this sample, you'll need:
 ```xml
   <dependencies>
     <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>azure-spring-boot-starter-active-directory</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-oauth2-resource-server</artifactId>
     </dependency>
@@ -37,7 +41,7 @@ To run this sample, you'll need:
 
 ## Register your web API
 In this section, you register your web API in App registrations in the Azure portal.
-
+    
 ### Choose your Azure AD tenant
 
 To register your apps manually, choose the Azure Active Directory (Azure AD) tenant where you want to create your apps.

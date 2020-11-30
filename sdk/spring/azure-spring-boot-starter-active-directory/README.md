@@ -220,6 +220,10 @@ Please refer to [azure-spring-boot-sample-active-directory-spring-oauth2-resourc
 ```xml
   <dependencies>
     <dependency>
+      <groupId>com.azure.spring</groupId>
+      <artifactId>azure-spring-boot-starter-active-directory</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-oauth2-resource-server</artifactId>
     </dependency>
