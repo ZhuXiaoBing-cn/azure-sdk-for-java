@@ -1,7 +1,7 @@
 # OAuth 2.0 Sample for Azure AD Spring Boot Starter client library for Java
 
 ## Key concepts
-This sample illustrates how to use `azure-spring-boot-starter-active-directory` package to work with OAuth 2.0 and OpenID Connect protocols on Auzre. This sample will use Microsoft Graph API to retrieve user infomation
+This sample illustrates how to use `azure-spring-boot-starter-active-directory` package to work with OAuth 2.0 and OpenID Connect protocols on Auzre. This sample will use Microsoft Graph API to retrieve user infomation.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ The sample retrieves user's group memberships using Microsoft graph API which re
    - Click the **Add a permission** button	
    - Ensure that the **Microsoft APIs** tab is selected	
    - In the *Commonly used Microsoft APIs* section, click on **Microsoft Graph**	
-   - In the **Delegated permissions** section, ensure that the right permissions are checked: **Directory.AccessAsUser.All**	
+   - In the **Delegated permissions** section, ensure that the right permissions are checked: **Directory.AccessAsUser.All**(It will be used by the application to read user group information.) and **Calendars.Read**(It will be configured in the application.yml file to read the calendar.)
    - Select the **Add permissions** button
    - Under **Office 365 Management APIs** tab
    - Select **Delegated permissions**, and then click **ActivityFeed.Read**

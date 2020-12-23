@@ -59,7 +59,7 @@ You can follow *azure-spring-boot-sample-active-directory-spring-security-resour
 Convention current application id url is `api://sample-client-id`, ; the application id url of the sample *azure-spring-boot-sample-active-directory-spring-security-resource-server* is `custom-client-id`.  
 After adding as shown below:
 
-   ![API Permissions](resource/resource-server-obo-add-scope.png)
+   ![API Permissions](docs/resource-server-obo-add-scope.png)
 
 ### Add API permissions
 The current Web API will access Graph API and Custom API. 
@@ -81,7 +81,7 @@ Sign in to the [Azure portal][azure-portal]. If you have access to multiple tena
 
 ### Grant consent for your tenant
 Respectively grant admin consent to the Graph and Custom permissions. After adding as shown below:
-   ![API Permissions](resource/resource-server-obo-add-permissions.png)
+   ![API Permissions](docs/resource-server-obo-add-permissions.png)
 
 ## Examples
 

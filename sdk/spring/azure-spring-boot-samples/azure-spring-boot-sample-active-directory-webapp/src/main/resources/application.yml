@@ -1,15 +1,17 @@
 azure:
   activedirectory:
     authorization:
+      ##readme中没有体现arm怎么配置的，可能会产生疑惑
       arm:
         on-demand: true
-        scopes: https://management.core.windows.net/user_impersonation
+        scopes: api://567a07c9-589e-4ca9-9777-75f0d1644f5f/Files.read
       graph:
         scopes: https://graph.microsoft.com/Calendars.Read
+        ##office需要管理员同意，可能产生疑惑
       office:
         scopes: https://manage.office.com/ActivityFeed.Read
-    client-id: <client-id>
-    client-secret: <client-secret>
-    tenant-id: <tenant-id>
+    client-id: b36b06ca-2e14-4c1b-b6d6-7836c2fff564
+    client-secret: hxl3osiZ2KocqoWUw.c_313_o1jB3~-IJ7
+    tenant-id: 1c057e7c-54d9-4b52-8902-9e16b7485d35
     user-group:
       allowed-groups: group1, group2
