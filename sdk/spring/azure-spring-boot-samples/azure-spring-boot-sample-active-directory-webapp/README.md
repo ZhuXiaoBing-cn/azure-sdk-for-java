@@ -25,7 +25,7 @@ We need to ensure that this [environment checklist][ready-to-run-checklist] is c
 5. Under **webapp** application, select **Authentication** -> **Add a platform**, select **web** platform, redirect urls set to `http://localhost:8080/login/oauth2/code/azure`, check the Access Token and ID Token checkboxes, click configure button.![Add a platfform](docs/image-add-a-platfform.png "Add a platfform")
 6. Under **webapp** application, select **API permissions** -> **Add a permission**, select **Microsoft Graph**.![Api permission](docs/image-api-permissions.png "Api permission")
 7. Similarly, add **Directory.AccessAsUser.All** permission in **Microsoft Graph** and add **ActivityFeed.Read** permission in **Office 365 Management APIs**.![Add Directory.AccessAsUser.All and ActivityFeed.Read permission](docs/image-add-accessuser-and-activityfeed-permission.png "Add Directory.AccessAsUser.All and ActivityFeed.Read permission")
-
+8. Continue to select **API permissions** -> **Add a permission** -> **My APIS**, select **arm** tab, add **Files.read** permission,click **Add permissions** button.![Webapi permission](docs/image-webapi-permission.png "Webapi permission")
 
 
 #### Configure the callback URL
