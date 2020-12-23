@@ -9,15 +9,21 @@ This sample illustrates how to use `azure-spring-boot-starter-active-directory` 
 We need to ensure that this [environment checklist][ready-to-run-checklist] is completed before the run.
 
 ### Register your application with your Azure Active Directory Tenant
-
+#### Configure custom web app
 Follow the guide [here](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
-### Platform configurations
 
+#### Configure custom web api
+Follow the guide [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
+
+
+### Platform configurations
+#### Configure the callback URL
 ![Platform configurations](docs/image-platform-configurations.png "Platform configurations")
 
 - Set redirect URIs with `http://localhost:8080/login/oauth2/code/azure`.
 - Ensure **Access tokens** and **ID tokens** are selected.
 - To use on-demand authorization of certain resource, you need to add redirect URIs of `http://localhost:8080/login/oauth2/code/{registration-id}`. In this sample, set redirect URIs with `http://localhost:8080/login/oauth2/code/arm`.
+
 ### Configure necessary API permissions
 The sample retrieves user's group memberships using Microsoft graph API which requires the registered app to have `Directory.AccessAsUser.All` permission under `Delegated Permissions` of `Microsoft Graph`, which can allow an application to access the directory as the signed-in user. Also, to display the function of calling multiple resources, this sample will acquire `ActivityFeed.Read` permission under `Office 365 Management APIs` resource. You need AAD admin privilege to be able to grant the permission in API ACCESS -> Required permission. You can follow the below steps:	
 
@@ -25,12 +31,17 @@ The sample retrieves user's group memberships using Microsoft graph API which re
    - Click the **Add a permission** button	
    - Ensure that the **Microsoft APIs** tab is selected	
    - In the *Commonly used Microsoft APIs* section, click on **Microsoft Graph**	
-   - In the **Delegated permissions** section, ensure that the right permissions are checked: **Directory.AccessAsUser.All**(It will be used by the application to read user group information.) and **Calendars.Read**(It will be configured in the application.yml file to read the calendar.)
-   - Select the **Add permissions** button
+   - In the **Delegated permissions** section, ensure that the right permissions are checked: **Directory.AccessAsUser.All**(It will be used by the application to read user group information) 
+     and **Calendars.Read**(It will be configured in the application.yml file)
+   - Click the **Add permissions** button
+   - Under **My APIs** tab
+   - Select our custom **arm** item
+   - Select **Delegated permissions**, and then click **Files.read**(It will be configured in the application.yml file)
+   - Click the **Add permissions** button
    - Under **Office 365 Management APIs** tab
-   - Select **Delegated permissions**, and then click **ActivityFeed.Read**
-   - Select the **Add permissions** button
-   - Click **Grant Permissions...** and Yes when prompted.
+   - Select **Delegated permissions**, and then click **ActivityFeed.Read**(It will be configured in the application.yml file)
+   - Click the **Add permissions** button
+   - Click **Grant admin consent for...** and Yes when prompted.
 
 ### Configure groups for sign in user
 
