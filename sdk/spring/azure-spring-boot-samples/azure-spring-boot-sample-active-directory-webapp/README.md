@@ -8,15 +8,24 @@ This sample illustrates how to use `azure-spring-boot-starter-active-directory` 
 ### Environment checklist
 We need to ensure that this [environment checklist][ready-to-run-checklist] is completed before the run.
 
-### Register your application with your Azure Active Directory Tenant
-#### Configure custom web app
-Follow the guide [here](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app).
+### Platform configurations
+If you 
 
+#### Configure custom web app
+1. Search for and select Azure Active Directory.
+2. Under Manage, select **App registrations** -> **New registration**.![Protal manage](docs/image-protal-manage.png "Protal manage")
+3. The registered application name is filled into **webapp**, select **Accounts in this organizational directory only**, click the register button.![Register a web app](docs/image-register-a-web-app.png "Register a web app")
+4. Under **webapp** application, select **Certificates & secrets** -> **new client secret**, expires select **Never**, click the add button.(Remember to save the secrets here and use them later)![Creat secrets](docs/image-creat-secrets.png "Creat secrets")
+5. Under **webapp** application, select **Authentication** -> **Add a platform**, select **web** platform, redirect urls set to `http://localhost:8080/login/oauth2/code/azure`, check the Access Token and ID Token checkboxes, click configure button.![Add a platfform](docs/image-add-a-platfform.png "Add a platfform")
+6. Under **webapp** application, select **API permissions** -> **Add a permission**, select **Microsoft Graph**.![Api permission](docs/image-api-permissions.png "Api permission")
+7. Similarly, add **Directory.AccessAsUser.All** permission in **Microsoft Graph** and add **ActivityFeed.Read** permission in **Office 365 Management APIs**.![Add Directory.AccessAsUser.All and ActivityFeed.Read permission](docs/image-add-accessuser-and-activityfeed-permission.png "Add Directory.AccessAsUser.All and ActivityFeed.Read permission")
 #### Configure custom web api
 Follow the guide [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
 
 
-### Platform configurations
+
+
+
 #### Configure the callback URL
 ![Platform configurations](docs/image-platform-configurations.png "Platform configurations")
 
