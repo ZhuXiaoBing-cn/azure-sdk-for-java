@@ -8,21 +8,23 @@ This sample illustrates how to use `azure-spring-boot-starter-active-directory` 
 ### Environment checklist
 We need to ensure that this [environment checklist][ready-to-run-checklist] is completed before the run.
 
-### Platform configurations
-If you 
+### Plator configurations
 
-#### Configure custom web app
+#### Configure custom web api
 1. Search for and select Azure Active Directory.
 2. Under Manage, select **App registrations** -> **New registration**.![Protal manage](docs/image-protal-manage.png "Protal manage")
+3. The registered application name is filled into **arm**, select **Accounts in this organizational directory only**, click **register** button.![Register a web api](docs/image-register-a-web-api.png "Register a web api")
+4. Under **arm** application, select **Certificates & secrets** -> **new client secret**, expires select **Never**, click **add** button.(Remember to save the secrets here and use them later)![Creat secrets](docs/image-creat-secrets-api.png "Creat secrets")
+5. Under **arm** application, select **Expose an API** -> **Add a scope**, Use the default **Application ID URI**, click **Save and continue** button.![Expose apis](docs/image-expose-apis.png "Expose apis")
+6. After step five,the page will refresh again.Then set the **Scope name** to *Files.read*.![Add a scope](docs/image-add-a-scope.png "Add a scope")
+
+#### Configure custom web app
+2. Under Manage, select **App registrations** -> **New registration**.![Protal manage](docs/image-protal-manage.png "Protal manage")
 3. The registered application name is filled into **webapp**, select **Accounts in this organizational directory only**, click the register button.![Register a web app](docs/image-register-a-web-app.png "Register a web app")
-4. Under **webapp** application, select **Certificates & secrets** -> **new client secret**, expires select **Never**, click the add button.(Remember to save the secrets here and use them later)![Creat secrets](docs/image-creat-secrets.png "Creat secrets")
+4. Under **webapp** application, select **Certificates & secrets** -> **new client secret**, expires select **Never**, click the add button.(Remember to save the secrets here and use them later)![Creat secrets](docs/image-creat-secrets-app.png "Creat secrets")
 5. Under **webapp** application, select **Authentication** -> **Add a platform**, select **web** platform, redirect urls set to `http://localhost:8080/login/oauth2/code/azure`, check the Access Token and ID Token checkboxes, click configure button.![Add a platfform](docs/image-add-a-platfform.png "Add a platfform")
 6. Under **webapp** application, select **API permissions** -> **Add a permission**, select **Microsoft Graph**.![Api permission](docs/image-api-permissions.png "Api permission")
 7. Similarly, add **Directory.AccessAsUser.All** permission in **Microsoft Graph** and add **ActivityFeed.Read** permission in **Office 365 Management APIs**.![Add Directory.AccessAsUser.All and ActivityFeed.Read permission](docs/image-add-accessuser-and-activityfeed-permission.png "Add Directory.AccessAsUser.All and ActivityFeed.Read permission")
-#### Configure custom web api
-Follow the guide [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-expose-web-apis).
-
-
 
 
 
