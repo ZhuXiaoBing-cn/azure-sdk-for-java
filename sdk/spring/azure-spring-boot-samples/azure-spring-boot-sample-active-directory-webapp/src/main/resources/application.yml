@@ -1,15 +1,13 @@
 azure:
   activedirectory:
     authorization:
-      ##readme中没有体现arm怎么配置的，可能会产生疑惑
       arm:
         on-demand: true
         scopes: api://43ddc6e0-5cd5-4075-bd52-162d82fa4150/Files.read
       graph:
         scopes: https://graph.microsoft.com/Calendars.Read
-        ##office需要管理员同意，可能产生疑惑
-#      office:
-#        scopes: https://manage.office.com/ActivityFeed.Read
+      office:
+        scopes: https://manage.office.com/ActivityFeed.Read
     client-id: 9117d1f1-4167-41a7-ab05-73ed4bfe0988
     client-secret: kp_20JduD6H5un_6VF2WPBY3X6lOI-hhk-
     tenant-id: 1c057e7c-54d9-4b52-8902-9e16b7485d35
