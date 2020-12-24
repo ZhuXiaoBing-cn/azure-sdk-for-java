@@ -16,7 +16,8 @@ We need to ensure that this [environment checklist][ready-to-run-checklist] is c
 5. Under **arm** application, select **Expose an API** -> **Add a scope**, Use the default **Application ID URI**, click **Save and continue** button.![Expose apis](docs/image-set-app-id-url.png "Expose apis")
 6. After step five,the page will refresh again.Then set the **Scope name** to *Files.read*.(This scope will be used in Application.yml)![Add a app id url](docs/image-add-a-scope.png "Add a app id url")
 7. Expose scopes in web API registration.![Expose api](docs/image-expose-api.png "Expose api")
-See [Register app or web API], [Expose scopes in web API registration] for more information about the Web API.
+
+See [Register app or web api], [Expose scopes in web api registration] for more information about the Web API.
    
 #### Configure web app
 1. Under Manage In the same tenant, select **App registrations** -> **New registration**.![Protal manage](docs/image-protal-manage.png "Protal manage")
@@ -30,7 +31,7 @@ See [Register app or web API], [Expose scopes in web API registration] for more 
 9. click **Grant admin consent for...**.![Grant permission](docs/image-granted-permission.png "Grant permission")
 10. Finally.![Final](docs/image-final.png "Final")
 
-See [Register app or web API], [Grant scoped permission] for more information about the Web APP.
+See [Register app or web api], [Grant scoped permission] for more information about the Web APP.
 
 #### Configure groups for sign in user
 In order to try the authorization action with this sample with minimum effort, [configure the user and groups in Azure Active Directory], configure the user with `group1`. 
