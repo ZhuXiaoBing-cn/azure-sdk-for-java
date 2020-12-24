@@ -8,7 +8,7 @@ This sample illustrates how to use `azure-spring-boot-starter-active-directory` 
 ### Environment checklist
 We need to ensure that this [environment checklist][ready-to-run-checklist] is completed before the run.
 
-### Plator configurations
+### Portal configurations
 
 #### Configure custom web api
 1. Search for and select Azure Active Directory.
